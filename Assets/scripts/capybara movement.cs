@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class capybaramovement : MonoBehaviour
 {
+    private float updateCount = 0;
+    private float fixedUpdateCount = 0;
+    private float updateUpdateCountPerSecond;
+    private float updateFixedUpdateCountPerSecond;
     private Rigidbody2D rb;
     private Transform tf;
     private static readonly float spead = 1000f;
     private static readonly float jumpPower = 1000f;
     // Start is called before the first frame update;
     void Start()
+
     {
         rb = GetComponent<Rigidbody2D>();
         tf = GetComponent<Transform>();
